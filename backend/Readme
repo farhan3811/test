@@ -1,0 +1,35 @@
+# 🔐 Secure Auth API (Express + JWT + MySQL + Knex)
+
+Sebuah REST API sederhana dan **aman** untuk sistem autentikasi login/register menggunakan **Express.js**, **JWT**, dan **Knex.js** dengan database **MySQL**.
+
+## 🚀 Fitur Utama
+
+- Register & Login menggunakan email dan password
+- Password di-*hash* dengan `bcrypt`
+- Autentikasi berbasis `JWT` yang aman dan disimpan di HTTP-only cookie
+- Proteksi route menggunakan middleware token
+- Validasi input register/login
+- Struktur modular dan aman
+
+---
+
+## 🧰 Tech Stack & Library
+
+### Backend
+- **Express.js** – framework utama REST API
+- **JWT (`jsonwebtoken`)** – autentikasi token
+- **Bcrypt (`bcryptjs`)** – enkripsi password
+- **CORS** – mengatur akses frontend
+- **Helmet** – mengamankan header HTTP
+- **Dotenv** – mengelola variabel rahasia
+- **Knex.js** – query builder SQL
+- **MySQL** – basis data
+- **Validator** – validasi data login/register
+
+### Keamanan yang Digunakan
+- ✅ Password disimpan dengan hashing (bcrypt)
+- ✅ Token disimpan dalam HTTP-only cookie (tidak bisa diakses oleh JS client)
+- ✅ Input divalidasi sebelum diproses
+- ✅ Header HTTP dilindungi dengan Helmet
+- ✅ Route sensitif dilindungi dengan middleware `verifyToken`
+
